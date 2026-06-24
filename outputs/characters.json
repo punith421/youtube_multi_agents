@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Gaurish Akki",
+    "gender": "Male",
+    "role": "Host of the documentary/discussion",
+    "age_group": "Adult",
+    "appearance": "Unspecified, but implied to be professional and presentable for a modern studio setting, likely with an intellectual demeanor.",
+    "clothing": "Professional, modern attire (e.g., smart shirt, blazer).",
+    "personality": "Intellectual, engaging, curious, a facilitator of deep discussion, seeking understanding and profound truths."
+  },
+  {
+    "name": "Vidwan Jagadish Sharma",
+    "gender": "Male",
+    "role": "Distinguished scholar, expert on the Mahabharata, interviewee",
+    "age_group": "Elderly",
+    "appearance": "Distinguished and intellectual presence, likely with a thoughtful expression.",
+    "clothing": "Professional, possibly traditional Indian attire (e.g., kurta) or smart Western wear (e.g., suit jacket).",
+    "personality": "Deeply intellectual, insightful, philosophical, authoritative in his field, challenges conventional understanding, wise, profound."
+  },
+  {
+    "name": "Symbolic Ordinary Person",
+    "gender": "Ambiguous/Universal",
+    "role": "Embodiment of universal human potential for divinity",
+    "age_group": "Adult",
+    "appearance": "Starts as a silhouette, then glows with a soft inner light, expands, and takes on an almost divine aura.",
+    "clothing": "Generic or simple, suggesting everyday attire before transformation.",
+    "personality": "Represents innate potential, the spark of divinity within every individual, capable of extraordinary transformation."
+  },
+  {
+    "name": "Symbolic Humble Dog",
+    "gender": "Ambiguous",
+    "role": "Representation of how perceptions of 'lowliness' can mask 'kingship' or 'great friendship'",
+    "age_group": "Adult (animal equivalent)",
+    "appearance": "Transforms from a humble dog into a regal king, then a steadfast, loyal friend (these are symbolic transformations, not literal physical changes of a dog).",
+    "clothing": "None (as a dog); symbolically adorned as a king, then simply as a friend.",
+    "personality": "Loyalty, potential for greatness, steadfastness, challenging superficial judgment."
+  },
+  {
+    "name": "The Pandavas",
+    "gender": "Male",
+    "role": "Five legendary brothers from the Mahabharata, main protagonists, figures of destiny",
+    "age_group": "Young Adult/Adult",
+    "appearance": "Five cloaked figures, emerging from a dense, symbolic forest, carrying an ambiguous bundle.",
+    "clothing": "Cloaked attire, suggesting mystery, travel, and a shared, perhaps obscured, identity.",
+    "personality": "United (as a group), determined, fated, carrying a burden or a significant offering, central figures in a cosmic design."
+  },
+  {
+    "name": "Draupadi",
+    "gender": "Female",
+    "role": "Legendary queen from the Mahabharata, a central and fated figure, 'alms', whose destiny is shaped by a pivotal incident",
+    "age_group": "Young Adult",
+    "appearance": "Initially a faint, beautiful silhouette, then coalesces into a shimmering form. A close-up on her face shows partial obscuration, revealing a moment of shock, confusion, and dawning realization. Described as 'the girl'.",
+    "clothing": "Implied to be beautiful or regal in silhouette. Later, a 'shimmering form' suggests ethereal or divine clothing.",
+    "personality": "Fated, destined, mysterious, initially confused and shocked by her circumstances, pivotal, a divine offering, enduring."
+  },
+  {
+    "name": "Kunti",
+    "gender": "Female",
+    "role": "Mother of the Pandavas, whose casual command irrevocably twists the threads of fate, sealing Draupadi's polyandrous destiny",
+    "age_group": "Elderly/Middle-aged",
+    "appearance": "Only an aged hand visible, emerging from shadows in a humble hut interior.",
+    "clothing": "Not visible beyond the hand.",
+    "personality": "Authoritative, perhaps pragmatic or acting out of habit, unknowingly instrumental in a cosmic design, her actions are deeply fateful."
+  }
+]

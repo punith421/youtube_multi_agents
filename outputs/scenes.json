@@ -1,0 +1,58 @@
+[
+  {
+    "scene_number": 1,
+    "duration_seconds": 18,
+    "visual_description": "Open on a dark, opulent screen. A single, ancient-looking manuscript scroll slowly unfurls, its delicate parchment glowing with an inner light. Ethereal sounds of an ancient flute blend with a deep, resonant rumble. The title, 'UNVEILING THE MAHABHARATA: DESTINY'S CALL,' appears, then fades.",
+    "camera_movement": "Slow reveal of the scroll, gentle push in on the glowing parchment.",
+    "characters": [],
+    "voiceover": "For millennia, its echoes have shaped a subcontinent, its characters etched into the very soul of humanity. The Mahabharata – a saga of gods and mortals, dharma and destruction. But what if the epic we think we know, the tales spun on our screens, are merely shadows of a far deeper truth? What if the real story lies hidden, waiting to be revealed?"
+  },
+  {
+    "scene_number": 2,
+    "duration_seconds": 15,
+    "visual_description": "Visuals transition to a sleek, modern studio, bathed in warm, intellectual light. Our host sits opposite a distinguished scholar, Vidwan Jagadish Sharma. The atmosphere is charged with anticipation, a quest for understanding, with bookshelves and subtle cultural artifacts in the background.",
+    "camera_movement": "Slow pan across the studio, settling on a medium shot of the host and scholar.",
+    "characters": ["Host", "Vidwan Jagadish Sharma"],
+    "voiceover": "In a world saturated with fleeting interpretations, the challenge is immense: to strip away the popular dramatizations, the simplified narratives, and peer into the very heart of this ancient masterpiece. What fundamental understanding can it offer a generation adrift in complexity? Here, in Gaurish Akki's studio, we embark on that journey."
+  },
+  {
+    "scene_number": 3,
+    "duration_seconds": 25,
+    "visual_description": "The scene shifts, subtly animating. A silhouette of an ordinary person begins to glow with an inner, soft light, expanding, taking on an almost divine aura. Simultaneously, images flash: a humble dog transforming first into a regal king, then a steadfast, loyal friend (represented symbolically).",
+    "camera_movement": "Dynamic cuts and slow, smooth animation reveals.",
+    "characters": [],
+    "voiceover": "Vidwan Jagadish Sharma begins not with battlefields, but with the boundless nature of divinity itself. He posits a radical idea: that within the most ordinary among us lies the potential for extraordinary divinity. The universe, in its infinite wisdom, often sees 'kingship' or 'great friendship' where our limited vision perceives only 'lowliness.' It’s a profound philosophical declaration, a testament to humanity’s innate potential, challenging us to look beyond superficial appearances to the spirit within."
+  },
+  {
+    "scene_number": 4,
+    "duration_seconds": 15,
+    "visual_description": "Visuals sharpen, focusing on abstract representations of fate, unseen threads intertwining. A dense, symbolic forest parts, revealing five cloaked figures – the Pandavas – emerging, carrying an ambiguous bundle. Behind them, a faint, beautiful silhouette becomes discernible: a woman.",
+    "camera_movement": "Tracking shot through the symbolic forest, then a slow zoom in on the group and the silhouette.",
+    "characters": ["The Pandavas (five cloaked figures)", "Draupadi (silhouette)"],
+    "voiceover": "But then, the lens sharpens on a figure cloaked in destiny: 'the girl.' Implicitly, unmistakably, it is Draupadi. Her arrival is not coincidental; it is an act of fate, a preordained collision of wills and circumstances. She enters their lives, not as a prize, but as 'alms,' a divine offering brought from the unknown."
+  },
+  {
+    "scene_number": 5,
+    "duration_seconds": 20,
+    "visual_description": "The scene darkens to a humble hut interior. An aged hand emerges from the shadows. Abstract representations of gems, fruit, and milk float past, then coalesce into the shimmering form of Draupadi. A close-up on Draupadi’s face, partially obscured, reveals a moment of shock, confusion, and dawning realization.",
+    "camera_movement": "Rack focus from the aged hand to the coalescing Draupadi, then a tight close-up on Draupadi's face.",
+    "characters": ["Kunti (hand only)", "Draupadi"],
+    "voiceover": "And then, the words that would irrevocably twist the threads of fate: Kunti’s instruction. 'Whatever alms you have brought,' she declares, 'be it a gem, a fruit, or milk – whatever has come, share it equally among yourselves.' A mother's casual command, born perhaps of habit, or perhaps of an even deeper, cosmic design, seals Draupadi’s polyandrous destiny. This isn't mere historical anecdote; it is a profound philosophical crucible."
+  },
+  {
+    "scene_number": 6,
+    "duration_seconds": 25,
+    "visual_description": "Ancient scroll text unravels and distorts, then dynamically reconfigures into abstract, powerful symbols representing 'Destiny' and 'Principle.' A sense of profound revelation hangs in the air, with an ethereal glow.",
+    "camera_movement": "Dynamic animation with a slow pull-back to reveal the full scope of the symbolic transformation.",
+    "characters": [],
+    "voiceover": "Vidwan Sharma insists we move beyond the rigid demands of historical verifiability. For within these ancient narratives, the precise literal truth often pales before the monumental weight of the principle it embodies. The Mahabharata, in its deepest essence, is not a simple chronicle of events, but a profound philosophical text – a mirror reflecting the eternal dance between human agency and divine destiny, between the observable world and the unseen forces that govern it. It dares us to seek not just *what happened*, but *why*, and what timeless lessons these colossal figures continue to impart to us, even today."
+  },
+  {
+    "scene_number": 7,
+    "duration_seconds": 2,
+    "visual_description": "Fade to black.",
+    "camera_movement": "Still",
+    "characters": [],
+    "voiceover": ""
+  }
+]
