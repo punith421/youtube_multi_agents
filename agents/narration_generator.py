@@ -1,35 +1,62 @@
-import google.generativeai as genai
+import os
+from dotenv import load_dotenv
+from google import genai
 
-API_KEY = "AQ.Ab8RN6LWIoAdZQlbC9-cpMC3j-HTyLO3ySIklBphVNilFQv7iA"
+# ==========================================
+# LOAD GEMINI
+# ==========================================
 
-genai.configure(api_key=API_KEY)
+load_dotenv()
 
-model = genai.GenerativeModel("gemini-2.5-flash")
+client = genai.Client(
+    api_key=os.getenv("GEMINI_API_KEY")
+)
 
-with open("outputs/story.txt", "r", encoding="utf-8") as f:
-    story = f.read()
+INPUT_FILE = "outputs/final_transcript.txt"
+OUTPUT_FILE = "outputs/narration.txt"
 
-prompt = f"""
-You are a professional documentary writer.
+print("=" * 60)
+print("🎙️ NARRATION GENERATOR")
+print("=" * 60)
 
-Convert the following story analysis into a cinematic narration.
+with open(INPUT_FILE, "r", encoding="utf-8") as f:
+    transcript = f.read()
 
-Rules:
-- Sound like a Netflix documentary.
-- Be dramatic and engaging.
-- Keep historical and philosophical meaning.
-- Write 2-3 minutes of narration.
-- Do not use bullet points.
+PROMPT = f"""
+You are a professional Netflix documentary writer.
 
-Story:
+Transform the following transcript into a cinematic documentary narration.
 
-{story}
+Requirements:
+
+- Natural spoken English
+- Emotionally engaging
+- Dramatic storytelling
+- Historical accuracy
+- Keep the original meaning
+- Smooth transitions
+- No bullet points
+- No scene numbers
+- No speaker names
+- Suitable for AI voice generation
+- Around 2–3 minutes long
+
+Transcript:
+
+{transcript}
 """
 
-response = model.generate_content(prompt)
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents=PROMPT
+)
 
-with open("outputs/narration.txt", "w", encoding="utf-8") as f:
-    f.write(response.text)
+narration = response.text.strip()
 
-print("✅ Narration generated!")
-print("📄 outputs/narration.txt")
+os.makedirs("outputs", exist_ok=True)
+
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    f.write(narration)
+
+print("\n✅ Narration generated!")
+print(f"📄 Saved: {OUTPUT_FILE}")

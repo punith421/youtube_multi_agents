@@ -1,20 +1,83 @@
-from moviepy import ImageClip, concatenate_videoclips
 import os
+from moviepy import ImageClip, AudioFileClip, concatenate_videoclips
+
+# ==========================================
+# CONFIG
+# ==========================================
+
+IMAGES_DIR = "outputs_v2/images"
+AUDIO_FILE = "outputs_v2/narration.wav"
+OUTPUT_VIDEO = "outputs_v2/final_movie.mp4"
+
+print("=" * 70)
+print("🎬 VIDEO ASSEMBLER")
+print("=" * 70)
+
+# ==========================================
+# LOAD IMAGES
+# ==========================================
+
+images = sorted([
+    os.path.join(IMAGES_DIR, f)
+    for f in os.listdir(IMAGES_DIR)
+    if f.lower().endswith(".png")
+])
+
+if not images:
+    raise Exception("❌ No images found in outputs_v2/images")
+
+# ==========================================
+# LOAD AUDIO
+# ==========================================
+
+if not os.path.exists(AUDIO_FILE):
+    raise FileNotFoundError(f"❌ Audio file not found: {AUDIO_FILE}")
+
+audio = AudioFileClip(AUDIO_FILE)
+
+duration = audio.duration / len(images)
+
+print(f"🎵 Audio Duration : {audio.duration:.2f} sec")
+print(f"🖼️ Images         : {len(images)}")
+print(f"⏱️ Time/Image     : {duration:.2f} sec")
+
+# ==========================================
+# CREATE VIDEO CLIPS
+# ==========================================
 
 clips = []
 
-for i in range(1, 8):
-    image_path = f"images/scene_{i}.png"
+for img in images:
 
-    if os.path.exists(image_path):
-        clip = ImageClip(image_path).with_duration(3)
-        clips.append(clip)
+    clip = (
+        ImageClip(img)
+        .with_duration(duration)
+        .resized(height=1080)
+    )
 
-final_video = concatenate_videoclips(clips, method="compose")
+    clips.append(clip)
 
-final_video.write_videofile(
-    "outputs/final_video.mp4",
-    fps=24
+# ==========================================
+# COMBINE VIDEO
+# ==========================================
+
+video = concatenate_videoclips(clips, method="compose")
+video = video.with_audio(audio)
+
+os.makedirs("outputs_v2", exist_ok=True)
+
+# ==========================================
+# EXPORT FINAL VIDEO
+# ==========================================
+
+video.write_videofile(
+    OUTPUT_VIDEO,
+    codec="libx264",
+    audio_codec="aac",
+    fps=30
 )
 
-print("✅ Video created!")
+print("\n" + "=" * 70)
+print("✅ FINAL MOVIE CREATED")
+print(f"📄 Saved : {OUTPUT_VIDEO}")
+print("=" * 70)

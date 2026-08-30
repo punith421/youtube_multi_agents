@@ -1,2 +1,74 @@
+# Environment variables and secrets
+.env
+*.env
+
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Generated outputs
+outputs/
+outputs_v2/
+
+# Generated media
+images/
+data/*.webm
+data/*.mp3
+data/*.wav
+data/*.mp4
+*.mp4
+
+# Temporary files
+*.log
+.gitignore.save# Secrets
+.env
+agents/.env
+
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Mac files
+.DS_Store
+.gitignore.save
+
+# Generated outputs
+outputs/
+outputs_v2/
+images/
+data/*.webm
+data/*.mp3
+data/*.wav
+
+# Generated videos
+*.mp4# Environment and secrets
+.env
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Generated media
+data/audio.webm
+images/*.png
+outputs/*.mp4
+outputs_v2/
+
+# Optional generated temporary files
+*.webm
 agents/.env
 agents/.env

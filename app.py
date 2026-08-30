@@ -1,8 +1,17 @@
-from agents.downloader import download_audio
-from agents.transcriber import transcribe_audio
+from agents.transcript_corrector import correct_transcript
 
-url = input("Enter YouTube URL: ")
+def main():
 
-download_audio(url)
+    print("=" * 60)
+    print("🎬 YOUTUBE MULTI AGENT")
+    print("=" * 60)
 
-transcribe_audio("data/audio.webm")
+    input_file = "outputs/transcript.txt"
+
+    final_file = correct_transcript(input_file)
+
+    print("\n✅ Done!")
+    print(final_file)
+
+if __name__ == "__main__":
+    main()

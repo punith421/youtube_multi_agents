@@ -1,47 +1,50 @@
 import json
 import os
+import urllib.parse
 import requests
-from dotenv import load_dotenv
 
-load_dotenv()
-
-HF_TOKEN = os.getenv("HF_TOKEN")
-
-API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
-
-headers = {
-    "Authorization": f"Bearer {HF_TOKEN}"
-}
-
+# Create images folder
 os.makedirs("images", exist_ok=True)
 
+# Load prompts
 with open("outputs/image_prompts.json", "r", encoding="utf-8") as f:
     prompts = json.load(f)
+
+print(f"🎬 Found {len(prompts)} scenes")
 
 for i, scene in enumerate(prompts, start=1):
 
     prompt = scene["prompt"]
 
-    print(f"🎨 Generating Scene {i}...")
+    print(f"\n🎨 Generating Scene {i}...")
+    print(prompt[:80] + "...")
 
-    response = requests.post(
-        API_URL,
-        headers=headers,
-        json={"inputs": prompt},
-        timeout=300
+    # Encode prompt
+    encoded = urllib.parse.quote(prompt)
+
+    # Pollinations AI
+    url = (
+        f"https://image.pollinations.ai/prompt/{encoded}"
+        "?width=1280"
+        "&height=720"
+        "&model=flux"
+        f"&seed={i}"
     )
+
+    response = requests.get(url, timeout=300)
 
     if response.status_code == 200:
 
-        image_path = f"images/scene_{i}.png"
+        filename = f"images/scene_{i}.png"
 
-        with open(image_path, "wb") as img:
-            img.write(response.content)
+        with open(filename, "wb") as f:
+            f.write(response.content)
 
-        print(f"✅ Saved {image_path}")
+        print(f"✅ Saved {filename}")
 
     else:
-        print(f"❌ Scene {i} failed")
+
+        print("❌ Failed")
         print(response.text)
 
-print("🎉 Image generation complete!")
+print("\n🎉 All scenes generated successfully!")
